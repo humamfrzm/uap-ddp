@@ -12,12 +12,12 @@ enum eDirection { STOP = 0, LEFT, RIGHT, UP, DOWN };
 eDirection dir;
 
 void Setup() {
-    initscr(); // Initialize ncurses
+    initscr(); 
     clear();
-    noecho();  // Don't echo user input
-    cbreak();  // Line buffering disabled
-    curs_set(0);  // Hide the cursor
-    timeout(100); // Set a delay for getch()
+    noecho();  
+    cbreak();  
+    curs_set(0);  
+    timeout(100); 
 
     gameOver = false;
     dir = STOP;
@@ -140,7 +140,7 @@ int main() {
         Input();
         Logic();
     }
-    endwin(); // Cleanup ncurses
+    endwin(); 
     return 0;
 
 }
